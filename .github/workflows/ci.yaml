@@ -1,7 +1,10 @@
 name: CI
 
-on: push
-
+# on: push
+on:
+  release:
+    types: [created]
+    
 jobs:
   test-lint-build:
     runs-on: ubuntu-latest
